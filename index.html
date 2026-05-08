@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <title>私人植物管理系統</title>
+    <!-- 確保手機版版面正常 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 網頁標籤的小圖示 (隨意放了一片葉子) -->
+    <link rel="icon" href="https://fonts.gstatic.com/s/e/notoemoji/15.0/1f33f/72.png">
+    <style>
+        /* 讓邊界消失，讓 Iframe 填滿整個螢幕 */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #F4F7F5; }
+        /* 故意把高度設為 105% 並往上推，完美隱藏頂部的 Google 橫幅 */
+        iframe { 
+            width: 100%; 
+            height: calc(100% + 40px); 
+            border: none; 
+            margin-top: -35px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 👇 請將下面 src="..." 裡面的網址，換成您自己的 Google Apps Script 網址 👇 -->
+    <iframe src="https://script.google.com/macros/s/AKfycbxEsTaazpU1tUS207UeuLGTbz-T8O3fQ2JGaunsdwrj/dev"></iframe>
+</body>
+</html>
