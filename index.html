@@ -8,19 +8,27 @@
     <!-- 網頁標籤的小圖示 (隨意放了一片葉子) -->
     <link rel="icon" href="https://fonts.gstatic.com/s/e/notoemoji/15.0/1f33f/72.png">
     <style>
-        /* 讓邊界消失，讓 Iframe 填滿整個螢幕 */
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #F4F7F5; }
-        /* 故意把高度設為 105% 並往上推，完美隱藏頂部的 Google 橫幅 */
+        /* 讓邊界消失，讓 iframe 填滿整個螢幕 */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: #F4F7F5; 
+        }
+
+        /* 完美隱藏頂部的 Google 橫幅 */
+        /* Google 橫幅通常約 36px 高，我們將 iframe 往上推 40px 並增加高度來隱藏它 */
         iframe { 
             width: 100%; 
-            height: calc(100% + 40px); 
+            height: calc(100% + 40px); /* 增加高度補償 */
             border: none; 
-            margin-top: 0px; 
+            margin-top: -40px; /* 關鍵修改：負數 margin 才能把畫面往上推 */
         }
     </style>
 </head>
 <body>
-    <!-- 👇 請將下面 src="..." 裡面的網址，換成您自己的 Google Apps Script 網址 👇 -->
+    <!-- 👇 已經放入你原本的 Google Apps Script 網址 👇 -->
     <iframe src="https://script.google.com/macros/s/AKfycby1t-aBnSJ4xLY2UkzAk1jpQ1NzVV2i0COGMSB4vJCDLzVM6z44vnnQI2ZtV6xLEMFD7A/exec"></iframe>
 </body>
 </html>
